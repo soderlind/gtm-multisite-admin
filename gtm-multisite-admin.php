@@ -4,7 +4,7 @@ Plugin Name: Google Tag Manager Multisite Admin
 Plugin URI: https://github.com/soderlind/gtm-multisite-admin
 Description: Google Tag Manager Multisite Admin is an add-on to <a href="https://wordpress.org/plugins/duracelltomi-google-tag-manager/">DuracellTomi's Google Tag Manager for WordPress</a> plugin. With the add-on, you can add Google Tag Manager (GTM) IDs on the Network Sites page.
 Author: Per Soderlind
-Version: 0.0.1
+Version: 0.0.2
 Author URI: http://soderlind.no
 GitHub Plugin URI: soderlind/gtm-multisite-admin
 */
