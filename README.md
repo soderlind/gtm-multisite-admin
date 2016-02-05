@@ -8,6 +8,10 @@ Google Tag Manager Multisite Admin is an add-on to [DuracellTomi's Google Tag Ma
   <img src="https://github.com/soderlind/gtm-multisite-admin/blob/master/gtm-multisite-admin.gif?raw=true" alt="demo" style="border: solid 2px #ccc;" />
 </p>
 
+## Usage
+Click on Add Id and enter the GTM ID. Hit enter or click outsite the filed to save the GTM ID. If you click on the settings icon, the option page for the subsite Google Tag Manager will open.
+**Note, an empty field will delete the options for the subsite Google Tag Manager.**
+
 ## Prerequisite
 
 [DuracellTomi's Google Tag Manager for WordPress](https://wordpress.org/plugins/duracelltomi-google-tag-manager/) installed and activeted on the sites you want to use it. I have it Network Activated.
