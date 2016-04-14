@@ -1,13 +1,13 @@
 <?php
-/*
-Plugin Name: Google Tag Manager Multisite Admin
-Plugin URI: https://github.com/soderlind/gtm-multisite-admin
-Description: Google Tag Manager Multisite Admin is an add-on to <a href="https://wordpress.org/plugins/duracelltomi-google-tag-manager/">DuracellTomi's Google Tag Manager for WordPress</a> plugin. With the add-on, you can add Google Tag Manager (GTM) IDs on the Network Sites page.
-Author: Per Soderlind
-Version: 0.0.2
-Author URI: http://soderlind.no
-GitHub Plugin URI: soderlind/gtm-multisite-admin
-*/
+/**
+ * Plugin Name: Google Tag Manager Multisite Admin
+ * Plugin URI: https://github.com/soderlind/gtm-multisite-admin
+ * Description: Google Tag Manager Multisite Admin is an add-on to <a href="https://wordpress.org/plugins/duracelltomi-google-tag-manager/">DuracellTomi's Google Tag Manager for WordPress</a> plugin. With the add-on, you can add Google Tag Manager (GTM) IDs on the Network Sites page.
+ * Author: Per Soderlind
+ * Version: 0.0.2
+ * Author URI: http://soderlind.no
+ * GitHub Plugin URI: soderlind/gtm-multisite-admin
+ */
 
 
 if ( defined( 'ABSPATH' ) ) {
@@ -44,18 +44,18 @@ class GTM_Multisite_Admin {
 	 * Load scripts
 	 */
 	function gtm_multisite_admin_scripts() {
-		// multisite fix, use home_url() if domain mapped to avoid cross-domain issues
-		$http_scheme = ( is_ssl() ) ? "https" : "http";
+		// Multisite fix, use home_url() if domain mapped to avoid cross-domain issues.
+		$http_scheme = ( is_ssl() ) ? 'https' : 'http';
 		if ( home_url() != site_url() ) {
 			$ajaxurl = home_url( '/wp-admin/admin-ajax.php', $http_scheme );
 		} else {
 			$ajaxurl = site_url( '/wp-admin/admin-ajax.php', $http_scheme );
 		}
 		$url = plugins_url( '', __FILE__ );
-		wp_enqueue_script(  'change_gtm_id', $url . '/js/gtm-multisite-admin.js', array( 'jquery', 'jquery-effects-core' ), MSPORTFOLIO_VERSION );
+		wp_enqueue_script( 'change_gtm_id', $url . '/js/gtm-multisite-admin.js', array( 'jquery', 'jquery-effects-core' ), MSPORTFOLIO_VERSION );
 		wp_localize_script( 'change_gtm_id', 'gtm_multisite_options', array(
-				'nonce' => wp_create_nonce( "gtm_multisite_admin_security" )
-				, 'ajaxurl' =>  $ajaxurl
+				'nonce' => wp_create_nonce( 'gtm_multisite_admin_security' ),
+				'ajaxurl' => $ajaxurl,
 			)
 		);
 	}
@@ -79,7 +79,7 @@ class GTM_Multisite_Admin {
 	 */
 	public function manage_columns( $column_name, $site_id ) {
 
-		if ( "gtm-tag" == $column_name ) {
+		if ( 'gtm-tag' == $column_name ) {
 			echo '<div class="gtm-multisite">';
 			//delete_blog_option( $site_id, 'gtm4wp-options');
 			$active_plugins = get_blog_option( $site_id, 'active_plugins' );
@@ -126,7 +126,7 @@ class GTM_Multisite_Admin {
 	 * @return json encoded string
 	 */
 	public function gtm_multisite_admin_change_tag() {
-		header( "Content-type: application/json" );
+		header( 'Content-type: application/json' );
 		if ( check_ajax_referer( 'gtm_multisite_admin_security', 'security', false ) ) {
 			$site_id   = filter_var( $_POST['site_id'],    FILTER_VALIDATE_INT, array( 'default' => 0 ) );
 			$gtm_tag = filter_var( $_POST['gtm_tag'],  FILTER_SANITIZE_STRING, array( 'default' => 'Add ID' ) );
@@ -136,7 +136,7 @@ class GTM_Multisite_Admin {
 				die();
 			}
 			if ( isset( $gtm_tag ) || '' == $gtm_tag ) {
-				if (  "Add ID" != $gtm_tag ) {
+				if (  'Add ID' != $gtm_tag ) {
 					if ( '' == $gtm_tag ) {
 						delete_blog_option( $site_id, 'gtm4wp-options' );
 						$response['text']     = 'Add ID';
