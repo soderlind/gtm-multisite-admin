@@ -1,5 +1,7 @@
 # Google Tag Manager Multisite Admin
 
+<img src="https://travis-ci.org/soderlind/gtm-multisite-admin.svg?branch=master" />
+
 ## Description
 
 Google Tag Manager Multisite Admin is an add-on to [DuracellTomi's Google Tag Manager for WordPress](https://wordpress.org/plugins/duracelltomi-google-tag-manager/) plugin. With the add-on, you can add Google Tag Manager (GTM) IDs on the WordPress Multisite Network Sites page.
@@ -20,7 +22,7 @@ Click on Add Id and enter the GTM ID. Hit enter or click outsite the filed to sa
 
 Install and network activate Google Tag Manager Multisite Admin plugin.
 
-##Copyright and License
+## Copyright and License
 
 Google Tag Manager Multisite Admin is copyright 2016 Per Soderlind
 
