@@ -1,6 +1,7 @@
+<a href="https://travis-ci.org/soderlind/gtm-multisite-admin"><img src="https://travis-ci.org/soderlind/gtm-multisite-admin.svg?branch=master" /></a>
+
 # Google Tag Manager Multisite Admin
 
-<img src="https://travis-ci.org/soderlind/gtm-multisite-admin.svg?branch=master" />
 
 ## Description
 
