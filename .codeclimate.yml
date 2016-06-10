@@ -13,7 +13,7 @@ engines:
   phpcodesniffer:
     enabled: true
     config:
-      standard: "WordPress"
+      standard: "WordPress-Core"
 ratings:
   paths:
   - "**.js"
