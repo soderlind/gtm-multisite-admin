@@ -1,4 +1,4 @@
-<a href="https://travis-ci.org/soderlind/gtm-multisite-admin"><img src="https://travis-ci.org/soderlind/gtm-multisite-admin.svg?branch=master" /></a>
+<a href="https://travis-ci.org/soderlind/gtm-multisite-admin"><img src="https://travis-ci.org/soderlind/gtm-multisite-admin.svg?branch=master" /></a> [![Code Climate](https://codeclimate.com/github/soderlind/gtm-multisite-admin/badges/gpa.svg)](https://codeclimate.com/github/soderlind/gtm-multisite-admin)
 
 # Google Tag Manager Multisite Admin
 
