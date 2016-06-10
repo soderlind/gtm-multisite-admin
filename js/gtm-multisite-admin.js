@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 
     // Bind to keyup events on the $selector.
     $(document).on('keypress', 'div.gtm-multisite :text', function(event) {
-        if(event.keyCode == 13) { // 13 = Enter Key
+        if(event.keyCode === 13) { // 13 = Enter Key
             $(this).blur(); // trigger blur event below
             event.preventDefault();
             return false; //don't submit the form
@@ -71,11 +71,11 @@ jQuery(document).ready(function($){
 				a.animate({backgroundColor: orgBackgroundColor}, 'fast');
 	        }
 			, success: function(data) {
-				if( 'success' == data.response ) {
+				if( 'success' === data.response ) {
                     a.text(data.text);
                     console.log(data);
                     //self.data('changeto',data.change_to);
-				} else if( 'failed' == data.response ) {
+				} else if( 'failed' === data.response ) {
 					console.log(data);
 				}
 			}
@@ -93,11 +93,11 @@ jQuery(document).ready(function($){
                     errorMessage = statusErrorMap[x.status];
                     if (!errorMessage) {
                         errorMessage = "Unknown Error.";
-                    } else if (exception == 'parsererror') {
+                    } else if (exception === 'parsererror') {
                         errorMessage = "Error. Parsing JSON request failed.";
-                    } else if (exception == 'timeout') {
+                    } else if (exception === 'timeout') {
                         errorMessage = "Request timed out.";
-                    } else if (exception == 'abort') {
+                    } else if (exception === 'abort') {
                         errorMessage = "Request was aborted by server.";
                     } else {
                         errorMessage = "Unknown Error.";
