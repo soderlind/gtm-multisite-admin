@@ -3,7 +3,7 @@ Contributors: PerS
 Tags: gtm, multiste
 Donate link: https://soderlind.no/donate/
 Requires at least: 4.3
-Tested up to: 4.4.2
+Tested up to: 4.6
 License: GPL
 
 Google Tag Manager Multisite Admin is an add-on to DuracellTomi\'s Google Tag Manager for WordPress
