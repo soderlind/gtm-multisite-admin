@@ -26,6 +26,8 @@ Click on Add Id and enter the GTM ID. Hit enter or click outsite the filed to sa
 Install and network activate Google Tag Manager Multisite Admin plugin.
 
 == Changelog ==
+= 0.0.6 =
+* Added missing constant
 = 0.0.5 =
 * Tested & found compatible with WP 4.7.
 = 0.0.4 =
