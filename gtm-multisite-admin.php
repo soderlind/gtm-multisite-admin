@@ -12,6 +12,7 @@
 
 if ( defined( 'ABSPATH' ) ) {
 	define( 'GTM_PLUGIN_NAME', 'duracelltomi-google-tag-manager/duracelltomi-google-tag-manager-for-wordpress.php' );
+	define( 'GTM_MULTISITE_VERSION', '0.0.5' );
 	GTM_Multisite_Admin::instance();
 }
 
@@ -52,7 +53,7 @@ class GTM_Multisite_Admin {
 			$ajaxurl = site_url( '/wp-admin/admin-ajax.php', $http_scheme );
 		}
 		$url = plugins_url( '', __FILE__ );
-		wp_enqueue_script( 'change_gtm_id', $url . '/js/gtm-multisite-admin.js', array( 'jquery', 'jquery-effects-core' ), MSPORTFOLIO_VERSION );
+		wp_enqueue_script( 'change_gtm_id', $url . '/js/gtm-multisite-admin.js', array( 'jquery', 'jquery-effects-core' ), GTM_MULTISITE_VERSION );
 		wp_localize_script( 'change_gtm_id', 'gtm_multisite_options', array(
 				'nonce' => wp_create_nonce( 'gtm_multisite_admin_security' ),
 				'ajaxurl' => $ajaxurl,
