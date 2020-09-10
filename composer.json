@@ -1,0 +1,8 @@
+{
+    "name": "soderlind/gtm-multisite-admin",
+    "description": "Google Tag Manager Multisite Admin",
+    "type": "wordpress-plugin",
+    "homepage": "https://github.com/soderlind/gtm-multisite-admin",
+    "license": "GPL-2.0-or-later",
+    "require": {}
+}
